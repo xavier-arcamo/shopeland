@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopeland - Sheep Kingdom RTS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="hud">
+      <h1>Shopeland</h1>
+      <p>Command the Woolguard of Shopeland against the Ironfang warpack.</p>
+      <div class="panel">
+        <span>Gold: <strong id="gold">300</strong></span>
+        <span>Food: <strong id="food">120</strong></span>
+        <span>Population: <strong id="population">18/40</strong></span>
+        <span>Selected: <strong id="selected">None</strong></span>
+      </div>
+      <div class="actions">
+        <button id="recruitInfantry">Recruit Woolguard Infantry (50G)</button>
+        <button id="recruitKnight">Recruit Ram Knights (90G)</button>
+        <button id="togglePause">Pause</button>
+      </div>
+      <ul>
+        <li>Drag-select or click unit cards to select divisions.</li>
+        <li>Right-click to move selected divisions in formation.</li>
+        <li>Press <kbd>A</kbd> to toggle Attack-Move, <kbd>F</kbd> for Mass Attack.</li>
+        <li>Hold the central keep to win.</li>
+      </ul>
+      <div id="events"></div>
+    </div>
+
+    <div id="bottomBar">
+      <div id="unitCards"></div>
+      <div id="commandBar">
+        <button id="massAttack">Mass Attack (F)</button>
+        <button id="regroup">Regroup at Keep (R)</button>
+        <button id="clearSelection">Clear Selection</button>
+      </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>

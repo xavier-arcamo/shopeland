@@ -1,0 +1,147 @@
+:root {
+  --ui-bg: rgba(13, 21, 26, 0.8);
+  --ui-border: rgba(255, 255, 255, 0.24);
+  --accent: #f2ce73;
+  --good: #8ddf8a;
+  --bad: #e68282;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #020508;
+  color: #f5f7fa;
+}
+
+#gameCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+#hud {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  width: min(460px, 46vw);
+  z-index: 20;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--ui-border);
+  background: var(--ui-bg);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  margin: 0;
+  color: var(--accent);
+}
+
+p {
+  margin: 6px 0 8px;
+  font-size: 0.95rem;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.actions,
+#commandBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+button {
+  border: 1px solid var(--ui-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+button:hover { background: rgba(255, 255, 255, 0.15); }
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+}
+
+#events {
+  margin-top: 8px;
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 0.8rem;
+}
+
+#bottomBar {
+  position: fixed;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  z-index: 21;
+  border: 1px solid var(--ui-border);
+  border-radius: 10px;
+  background: rgba(8, 14, 20, 0.85);
+  padding: 8px;
+}
+
+#unitCards {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 8px;
+}
+
+.unit-card {
+  min-width: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+
+.unit-card.selected {
+  border-color: #8ecbff;
+  background: rgba(79, 141, 189, 0.25);
+}
+
+.unit-card.dead {
+  opacity: 0.5;
+}
+
+.unit-card-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.hp-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.hp-bar > div {
+  height: 100%;
+  background: linear-gradient(90deg, #f17d7d, #85df86);
+}
+
+.event-good { color: var(--good); }
+.event-bad { color: var(--bad); }

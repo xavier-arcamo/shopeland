@@ -1,0 +1,62 @@
+{
+  "name": "Greenflood Marches",
+  "size": 240,
+  "terrain": {
+    "baseHeight": 0,
+    "rolling": [
+      { "x": -70, "z": -15, "height": 6, "radius": 55 },
+      { "x": 35, "z": 40, "height": 5, "radius": 48 },
+      { "x": -10, "z": 70, "height": 4, "radius": 44 }
+    ],
+    "mountains": [
+      { "x": 80, "z": -70, "height": 26, "radius": 36 },
+      { "x": 95, "z": -45, "height": 18, "radius": 24 },
+      { "x": -95, "z": 82, "height": 22, "radius": 30 }
+    ],
+    "rivers": [
+      {
+        "start": { "x": -115, "z": -48 },
+        "end": { "x": 110, "z": 35 },
+        "width": 12,
+        "depth": 7
+      }
+    ],
+    "lakes": [
+      { "x": 58, "z": 76, "radius": 18, "depth": 8 },
+      { "x": -62, "z": 58, "radius": 12, "depth": 5 }
+    ]
+  },
+  "features": {
+    "trees": [
+      { "x": -75, "z": -65, "count": 26, "spread": 24 },
+      { "x": -15, "z": 48, "count": 34, "spread": 30 },
+      { "x": 34, "z": -20, "count": 25, "spread": 22 },
+      { "x": 70, "z": 56, "count": 20, "spread": 20 }
+    ],
+    "settlements": [
+      { "name": "Woolstead", "x": -64, "z": -20, "houses": 5 },
+      { "name": "Fordwatch", "x": 10, "z": 18, "houses": 6 },
+      { "name": "Highpen", "x": 52, "z": -54, "houses": 4 }
+    ],
+    "towers": [
+      { "x": -12, "z": -8 },
+      { "x": 18, "z": 8 }
+    ],
+    "bridges": [
+      { "x": -10, "z": -8, "length": 22, "angle": 0.35 }
+    ]
+  },
+  "spawns": {
+    "sheep": [
+      { "x": -48, "z": -34 },
+      { "x": -44, "z": -20 },
+      { "x": -37, "z": -27 }
+    ],
+    "wolves": [
+      { "x": 64, "z": 26 },
+      { "x": 68, "z": 38 },
+      { "x": 54, "z": 32 }
+    ]
+  },
+  "centerKeep": { "x": 0, "z": 0 }
+}
